@@ -86,6 +86,7 @@ def show_timecode_page():
             twitch_video_url = f"https://www.twitch.tv/videos/2305090004?t={total_seconds}s"
             st.write(f"Here is the link to the Twitch video at {timecode_input}: [Twitch Video](https://www.twitch.tv/videos/2305090004?t={total_seconds}s)")
 
+            st.subheader("Top words used at timecode minute")
             generate_wordcloud(timecode_input)
         else:
             st.error("Please enter a valid timecode in HH:MM:SS format.")
